@@ -1,8 +1,8 @@
 import React from 'react';
 import { HashRouter, Route } from 'react-router-dom';
-import Loadable from 'react-loadable';
-import { hot } from 'react-hot-loader';
+import universal from 'react-universal-component';
 import RefreshIndicator from 'material-ui/RefreshIndicator';
+import { hot } from 'react-hot-loader';
 import DrawerContainer from './components/Drawer/Drawer';
 import './styles/styles.css';
 
@@ -18,35 +18,28 @@ const RefreshIcon = () => (<RefreshIndicator
     }}
 />);
 
-const AboutComponent = Loadable({
-    loader: () => import('./components/About/about'),
-    loading: RefreshIcon
+const UniversalComponent = universal((props) => import(`${props.path}`), {
+    loading: RefreshIcon,
+    minDelay: 500
 });
 
-const SkillsComponent = Loadable({
-    loader: () => import('./components/Skills/skill'),
-    loading: RefreshIcon
-});
+const AboutComponent = () => <UniversalComponent path="./components/About/about" />;
 
-const WorkComponent = Loadable({
-    loader: () => import('./components/Work/work'),
-    loading: RefreshIcon
-});
+const SkillsComponent = () => <UniversalComponent path="./components/Skills/skill" />;
 
-const ProjectsComponent = Loadable({
-    loader: () => import('./components/Projects/projects'),
-    loading: RefreshIcon
-});
+const WorkComponent = () => <UniversalComponent path="./components/Work/work" />;
+
+const ProjectsComponent = () => <UniversalComponent path="./components/Projects/projects" />;
 
 const Routes = () => (
     <HashRouter>
         <div>
             <DrawerContainer />
             <div className="container">
-                <Route exact path="/" component={AboutComponent} />
-                <Route path="/skills" component={SkillsComponent} />
-                <Route path="/work" component={WorkComponent} />
-                <Route path="/projects" component={ProjectsComponent} />
+                <Route exact path="/" component={AboutComponent} key={Math.random()} />
+                <Route path="/skills" component={SkillsComponent} key={Math.random()} />
+                <Route path="/work" component={WorkComponent} key={Math.random()} />
+                <Route path="/projects" component={ProjectsComponent} key={Math.random()} />
             </div>
         </div>
     </HashRouter>

@@ -4,17 +4,21 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const VENDOR_LIBS = [
-    'react', 'react-dom', 'material-ui', 'react-loadable', 'react-router', 'react-router-dom', 'react-tap-event-plugin', 'react-hot-loader'
+    'react', 'react-dom', 'material-ui', 'react-router', 'react-router-dom', 'react-tap-event-plugin', 'react-universal-component'
 ];
 
 module.exports = {
     entry: {
-        app: './src/index.js',
+        app: [
+            'react-hot-loader/patch',
+            './src/index.js'
+        ],
         vendor: VENDOR_LIBS
     },
+    devtool: 'source-map',
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: '[name].[hash].js'
+        filename: '[name].bundle.js'
     },
     module: {
         rules: [
@@ -55,7 +59,8 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             names: ['vendor', 'manifest']
         }),
-        new webpack.optimize.UglifyJsPlugin(),
+        // new webpack.optimize.UglifyJsPlugin(),
+        new webpack.NamedModulesPlugin(),
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
