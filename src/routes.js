@@ -9,7 +9,11 @@ import DrawerContainer from './components/Drawer/Drawer';
 import './styles/styles.css';
 
 if (process.env.NODE_ENV === 'production') {
-    ReactGA.initialize('UA-115961362-1');
+    ReactGA.initialize('UA-115961362-1', {
+        gaOptions: {
+            siteSpeedSampleRate: 100
+        }
+    });
     ReactGA.pageview(window.location.hash);
 
     const history = createHashHistory();

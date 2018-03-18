@@ -50,7 +50,7 @@
     "clean": "rimraf dist",
     "build": "NODE_ENV=production npm run clean && webpack -p --config webpack/prod.config.js",
     "start": "NODE_ENV=development webpack-dev-server --hot --config webpack/dev.config.js",
-    "deploy": "npm run build && git subtree push --prefix dist origin gh-pages",
+    "deploy": "git subtree push --prefix dist origin gh-pages",
     "debug": "webpack -p --config webpack/prod.config.js --progress --colors --profile --display-modules --display-reasons --display-error-details --json > dist/stats.json",
     "analyze": "webpack-bundle-analyzer -s gzip dist/stats.json",
     "test": "npm run eslint",
