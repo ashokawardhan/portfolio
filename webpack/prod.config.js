@@ -8,7 +8,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 
 const VENDOR_LIBS = [
-    'react', 'react-dom', 'react-router', 'react-router-dom', 'react-tap-event-plugin', 'react-universal-component'
+    'opbeat-react', 'react', 'react-dom', 'react-router', 'react-router-dom', 'react-tap-event-plugin', 'react-universal-component'
 ];
 
 module.exports = merge(baseConfig, {

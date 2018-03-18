@@ -1,4 +1,4 @@
 {
     "presets": ["@babel/env", "@babel/react"],
-    "plugins": [ "universal-import", "syntax-dynamic-import", "react-hot-loader/babel"]
+    "plugins": [ "universal-import", "syntax-dynamic-import", "react-hot-loader/babel", "add-react-displayname"]
 }
