@@ -1,3 +1,6 @@
+/* eslint import/no-extraneous-dependencies: 0 */
+const merge = require('webpack-merge');
+const baseConfig = require('./base.config.js');
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -7,44 +10,23 @@ const VENDOR_LIBS = [
     'react', 'react-dom', 'material-ui', 'react-router', 'react-router-dom', 'react-tap-event-plugin', 'react-universal-component'
 ];
 
-module.exports = {
+module.exports = merge(baseConfig, {
     entry: {
-        app: [
-            'react-hot-loader/patch',
-            './src/index.js'
-        ],
+        app: path.join(process.cwd(), 'src/index.js'),
         vendor: VENDOR_LIBS
     },
-    devtool: 'source-map',
     output: {
-        path: path.join(__dirname, 'dist'),
-        filename: '[name].bundle.js'
+        path: path.join(process.cwd(), 'dist'),
+        filename: '[name].[chunkhash].js'
     },
     module: {
         rules: [
-            {
-                use: 'babel-loader',
-                test: /\.js$/,
-                exclude: /node_modules/
-            },
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     use: ['css-loader'],
                     fallback: 'style-loader'
                 })
-            },
-            {
-                test: /\.(jpe?g|png|gif|svg)$/,
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: {
-                            limit: 40000
-                        }
-                    },
-                    'image-webpack-loader'
-                ]
             }
         ]
     },
@@ -53,19 +35,18 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: '[name].css',
+            filename: '[name].[chunkhash].css',
             allChunks: true
         }),
         new webpack.optimize.CommonsChunkPlugin({
             names: ['vendor', 'manifest']
         }),
-        // new webpack.optimize.UglifyJsPlugin(),
-        new webpack.NamedModulesPlugin(),
+        new webpack.optimize.UglifyJsPlugin(),
+        new webpack.LoaderOptionsPlugin({
+            minimize: true,
+        }),
         new HtmlWebpackPlugin({
             template: 'src/index.html'
-        }),
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         })
     ]
-};
+});
