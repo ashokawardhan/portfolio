@@ -1,7 +1,7 @@
+import initOpbeat from 'opbeat-react';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import initOpbeat from 'opbeat-react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Routes from './routes';
 
