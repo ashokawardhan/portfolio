@@ -3,7 +3,7 @@ import Avatar from 'material-ui/Avatar';
 import { Card, CardText } from 'material-ui/Card';
 import Divider from 'material-ui/Divider';
 import Paper from 'material-ui/Paper';
-import Content from './content';
+import Content from 'src/components/About/content';
 import AboutImg from '../../images/about.jpg';
 
 const About = () => (

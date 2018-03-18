@@ -1,4 +1,5 @@
 /* eslint import/no-extraneous-dependencies: 0 */
+const path = require('path');
 
 module.exports = {
     module: {
@@ -21,5 +22,11 @@ module.exports = {
                 ]
             }
         ]
+    },
+    resolve: {
+        extensions: ['.js', '.jsx'],
+        alias: {
+            src: path.join(process.cwd(), 'src')
+        }
     }
 };
