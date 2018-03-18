@@ -5,9 +5,10 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 const VENDOR_LIBS = [
-    'react', 'react-dom', 'material-ui', 'react-router', 'react-router-dom', 'react-tap-event-plugin', 'react-universal-component'
+    'react', 'react-dom', 'react-router', 'react-router-dom', 'react-tap-event-plugin', 'react-universal-component'
 ];
 
 module.exports = merge(baseConfig, {
@@ -47,6 +48,15 @@ module.exports = merge(baseConfig, {
         }),
         new HtmlWebpackPlugin({
             template: 'src/index.html'
+        }),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production')
+        }),
+        new CompressionPlugin({
+            cache: true,
+            threshold: 10240,
+            minRatio: 0.8,
+            deleteOriginalAssets: true
         })
     ]
 });

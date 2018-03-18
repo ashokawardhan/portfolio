@@ -37,6 +37,9 @@ module.exports = merge(baseConfig, {
         new webpack.NamedModulesPlugin(),
         new HtmlWebpackPlugin({
             template: 'src/index.html'
+        }),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('development')
         })
     ]
 });
