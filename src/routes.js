@@ -3,11 +3,8 @@ import { HashRouter, Route } from 'react-router-dom';
 import universal from 'react-universal-component';
 import CircularProgress from 'material-ui/CircularProgress';
 import { hot } from 'react-hot-loader';
-import { wrapRouter } from 'opbeat-react';
 import DrawerContainer from './components/Drawer/Drawer';
 import './styles/styles.css';
-
-const OpbeatRouter = wrapRouter(HashRouter);
 
 const RefreshIcon = () => (<CircularProgress
     size={200}
@@ -35,7 +32,7 @@ const WorkComponent = () => <UniversalComponent path="./components/Work/work" />
 const ProjectsComponent = () => <UniversalComponent path="./components/Projects/projects" />;
 
 const Routes = () => (
-    <OpbeatRouter>
+    <HashRouter>
         <div>
             <DrawerContainer />
             <div className="container">
@@ -45,7 +42,7 @@ const Routes = () => (
                 <Route path="/projects" component={ProjectsComponent} key={Math.random()} />
             </div>
         </div>
-    </OpbeatRouter>
+    </HashRouter>
 );
 
 export default hot(module)(Routes);
