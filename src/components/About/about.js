@@ -8,14 +8,18 @@ import AboutImg from '../../images/about.jpg';
 
 const About = () => (
     <div>
-        <div style={{ backgroundColor: '#E4DBBF' }}>
+        <div style={{
+            backgroundColor: '#E4DBBF',
+            margin: 20
+        }}
+        >
             <Avatar
                 src={AboutImg}
                 className="about-image"
             />
         </div>
-        <Divider style={{ marginTop: 20 }} />
-        <Paper style={{ marginTop: 10 }} zDepth={5}>
+        <Divider style={{ marginLeft: 20, marginRight: 20 }} />
+        <Paper style={{ margin: 20 }} zDepth={5}>
             <Card style={{ backgroundColor: '#F6F6F6' }}>
                 <CardText style={{ fontSize: 30 }}>
                     <Content />
