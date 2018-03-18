@@ -24,6 +24,7 @@
     "babel-eslint": "^8.2.1",
     "babel-loader": "^7.1.2",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "compression-webpack-plugin": "^1.1.11",
     "eslint": "^4.18.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
@@ -37,6 +38,7 @@
     "rimraf": "^2.6.2",
     "url-loader": "^1.0.1",
     "webpack": "^3.11.0",
+    "webpack-bundle-analyzer": "^2.11.1",
     "webpack-dev-server": "^2.11.1",
     "webpack-merge": "^4.1.2"
   },
@@ -45,6 +47,8 @@
     "build": "NODE_ENV=production npm run clean && webpack -p --config webpack/prod.config.js",
     "start": "NODE_ENV=development webpack-dev-server --hot --config webpack/dev.config.js",
     "deploy": "npm run build && git subtree push --prefix dist origin gh-pages",
+    "debug": "webpack -p --config webpack/prod.config.js --progress --colors --profile --display-modules --display-reasons --display-error-details --json > dist/stats.json",
+    "analyze": "webpack-bundle-analyzer -s gzip dist/stats.json",
     "eslint": "eslint .",
     "fix-lint": "eslint --fix ."
   },
