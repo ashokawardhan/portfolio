@@ -4,11 +4,9 @@
   "description": "React resume",
   "main": "index.js",
   "dependencies": {
-    "babel-plugin-add-react-displayname": "0.0.5",
     "babel-plugin-universal-import": "^1.4.0",
     "css-loader": "^0.28.10",
     "material-ui": "^0.20.0",
-    "opbeat-react": "^3.4.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-hot-loader": "^4.0.0",
