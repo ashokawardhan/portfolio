@@ -3,6 +3,7 @@ import React from 'react';
 export default [
     {
         title: 'Software Developement Engineer I',
+        id: 0,
         subtitle: () => (
             <React.Fragment>
                 <div><b>Expedia</b></div>
@@ -29,6 +30,7 @@ export default [
     },
     {
         title: 'Associate Software Developement Engineer',
+        id: 1,
         subtitle: () => (
             <React.Fragment>
                 <div><b>Expedia</b></div>
@@ -55,6 +57,7 @@ export default [
     },
     {
         title: 'Software Developer',
+        id: 2,
         subtitle: () => (
             <React.Fragment>
                 <div><b>GreyOrange Pte Ltd</b></div>
@@ -80,6 +83,7 @@ export default [
     },
     {
         title: 'Full Stack Developer (Intern)',
+        id: 3,
         subtitle: () => (
             <React.Fragment>
                 <div><b>Ravgins</b></div>
@@ -107,7 +111,8 @@ export default [
         ]
     },
     {
-        title: 'Engineering Intern',
+        title: 'Backend Developer Intern',
+        id: 4,
         subtitle: () => (
             <React.Fragment>
                 <div><b>PurpleBerry Labs</b></div>
@@ -131,6 +136,7 @@ export default [
     },
     {
         title: 'Engineering Intern',
+        id: 5,
         subtitle: () => (
             <React.Fragment>
                 <div><b>3HD Media</b></div>

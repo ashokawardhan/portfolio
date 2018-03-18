@@ -11,7 +11,7 @@ const Work = () => (
             zDepth={2}
         />
         {
-            Experiences.map((experience) => <CardComponent {...experience} />)
+            Experiences.map((experience) => <CardComponent {...experience} key={experience.title} />)
         }
     </section>
 );

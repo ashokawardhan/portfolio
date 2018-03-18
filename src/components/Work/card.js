@@ -46,7 +46,7 @@ const CardComponent = (props) => (
             </CardText>
             <CardActions>
                 {props.links.map((link) => (
-                    <RaisedButton label={link.label} secondary onClick={() => openNewTab(link.url)} />
+                    <RaisedButton label={link.label} secondary onClick={() => openNewTab(link.url)} key={link.label} />
                 ))}
             </CardActions>
         </Card>
