@@ -52,11 +52,12 @@ module.exports = merge(baseConfig, {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
+        /* Not required for github
         new CompressionPlugin({
             cache: true,
             threshold: 10240,
             minRatio: 0.8,
             deleteOriginalAssets: true
-        })
+        }) */
     ]
 });
