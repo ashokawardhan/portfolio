@@ -3,8 +3,21 @@ import { HashRouter, Route } from 'react-router-dom';
 import universal from 'react-universal-component';
 import CircularProgress from 'material-ui/CircularProgress';
 import { hot } from 'react-hot-loader';
+import ReactGA from 'react-ga';
+import createHashHistory from 'history/createHashHistory';
 import DrawerContainer from './components/Drawer/Drawer';
 import './styles/styles.css';
+
+if (process.env.NODE_ENV === 'production') {
+    ReactGA.initialize('UA-115961362-1');
+    ReactGA.pageview(window.location.hash);
+
+    const history = createHashHistory();
+
+    history.listen(() => {
+        ReactGA.pageview(window.location.hash);
+    });
+}
 
 const RefreshIcon = () => (<CircularProgress
     size={200}

@@ -6,9 +6,11 @@
   "dependencies": {
     "babel-plugin-universal-import": "^1.4.0",
     "css-loader": "^0.28.10",
+    "history": "^4.7.2",
     "material-ui": "^0.20.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-ga": "^2.4.1",
     "react-hot-loader": "^4.0.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
