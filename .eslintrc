@@ -5,6 +5,13 @@
         "browser": true,
         "jasmine": true
     },
+    "settings": {
+        "import/resolver": {
+            "webpack": {
+                "config": "./webpack/base.config.js"
+            }
+        }
+    },
     "rules": {
         "react/jsx-filename-extension": [1, {"extensions": [".js"]}],
         "indent": [2, 4],
