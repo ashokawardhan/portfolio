@@ -20,6 +20,10 @@ module.exports = {
                     },
                     'image-webpack-loader'
                 ]
+            },
+            {
+                test: /\.json$/,
+                loader: 'json-loader'
             }
         ]
     },
