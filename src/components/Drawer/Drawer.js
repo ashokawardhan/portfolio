@@ -1,8 +1,15 @@
 import React, { Component, Fragment } from 'react';
+import styled from 'styled-components';
 import Drawer from 'material-ui/Drawer';
 import AppBar from 'material-ui/AppBar';
 import MenuItem from 'material-ui/MenuItem';
 import { Link } from 'react-router-dom';
+
+const StyledAppBar = styled(AppBar)`
+    @media (min-width: 720px) {
+        display: none !important;
+    }
+`;
 
 class DrawerContainer extends Component {
     state = { width: 0, open: true };
@@ -32,9 +39,8 @@ class DrawerContainer extends Component {
     render() {
         return (
             <Fragment>
-                <AppBar
+                <StyledAppBar
                     title="Ashoka Wardhan"
-                    className="app-drawer"
                     onClick={this.openDrawer}
                 />
                 <Drawer

@@ -1,18 +1,26 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const StyledImageContainer = styled.div`
+    text-align: center;
+    width: 100px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+`;
+
+const StyledImage = styled.img`
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    display: block;
+`;
 
 const ImageContainer = (props) => (
-    <div
-        style={{
-            textAlign: 'center',
-            width: 100,
-            marginLeft: 15,
-            marginRight: 15,
-            marginBottom: 25
-        }}
-    >
-        <img src={props.src} alt={props.text} style={{ width: 100, height: 100, display: 'block' }} />
+    <StyledImageContainer>
+        <StyledImage src={props.src} alt={props.text} />
         <span>{props.text}</span>
-    </div>
+    </StyledImageContainer>
 );
 
 export default ImageContainer;
