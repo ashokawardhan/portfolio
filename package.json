@@ -15,8 +15,7 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-tap-event-plugin": "^3.0.2",
-    "react-universal-component": "^2.8.4",
-    "style-loader": "^0.20.3"
+    "react-universal-component": "^2.8.4"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.40",
@@ -27,6 +26,7 @@
     "babel-loader": "^7.1.2",
     "babel-plugin-module-resolver": "^3.1.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "compression-webpack-plugin": "^1.1.11",
     "eslint": "^4.18.0",
     "eslint-config-airbnb": "^16.1.0",
@@ -40,6 +40,7 @@
     "image-webpack-loader": "^4.1.0",
     "prettier": "^1.10.2",
     "rimraf": "^2.6.2",
+    "style-loader": "^0.20.3",
     "url-loader": "^1.0.1",
     "webpack": "^3.11.0",
     "webpack-bundle-analyzer": "^2.11.1",

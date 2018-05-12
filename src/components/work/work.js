@@ -9,6 +9,7 @@ const Work = () => (
             title="Work"
             showMenuIconButton={false}
             zDepth={2}
+            className="inside-bar"
         />
         {
             Experiences.map((experience) => <CardComponent {...experience} key={experience.title} />)

@@ -15,11 +15,15 @@ module.exports = {
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 40000
+                            limit: 1000
                         }
                     },
                     'image-webpack-loader'
                 ]
+            },
+            {
+                test: /\.json$/,
+                loader: 'json-loader'
             }
         ]
     },
