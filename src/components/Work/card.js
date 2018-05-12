@@ -9,12 +9,6 @@ const openNewTab = (url) => {
 };
 
 const style = {
-    cardStyle: {
-        marginTop: 40,
-        marginBottom: 60,
-        marginLeft: 200,
-        marginRight: 200
-    },
     cardHeaderStyle: {
         headerStyle: {
             backgroundColor: '#000'
@@ -31,7 +25,7 @@ const style = {
 };
 
 const CardComponent = (props) => (
-    <Paper zDepth={4} style={style.cardStyle}>
+    <Paper zDepth={4} className="work-card">
         <Card>
             <CardHeader
                 title={props.title}
