@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import styled from 'styled-components';
 import ImageContainer from '../commons/imageContainer';
 import ReactImg from '../../images/react.png';
 import D3Img from '../../images/d3.png';
@@ -9,10 +10,19 @@ import BackboneImg from '../../images/backbone.png';
 import ParseImg from '../../images/parse.png';
 import ReduxImg from '../../images/redux.png';
 
+const CenterH1 = styled.h1`
+    text-align: center;
+`;
+const ImageContainerWrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+`;
+
 const frontend = () => (
     <Fragment>
-        <h1 style={{ textAlign: 'center' }}>Front End</h1>
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+        <CenterH1>Front End</CenterH1>
+        <ImageContainerWrapper>
             <ImageContainer src={ReactImg} text="React" />
             <ImageContainer src={ReduxImg} text="Redux" />
             <ImageContainer src={D3Img} text="D3.js" />
@@ -21,7 +31,7 @@ const frontend = () => (
             <ImageContainer src={JQueryImg} text="JQuery" />
             <ImageContainer src={BackboneImg} text="Backbone.js" />
             <ImageContainer src={ParseImg} text="Parse" />
-        </div>
+        </ImageContainerWrapper>
     </Fragment>
 );
 

@@ -8,7 +8,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 
 const VENDOR_LIBS = [
-    'react', 'react-dom', 'react-router', 'react-router-dom', 'react-ga', 'history', 'react-tap-event-plugin', 'react-universal-component'
+    'react', 'styled-components', 'react-dom', 'react-router', 'react-router-dom', 'react-ga', 'history', 'react-tap-event-plugin', 'react-universal-component'
 ];
 
 module.exports = merge(baseConfig, {
@@ -19,17 +19,6 @@ module.exports = merge(baseConfig, {
     output: {
         path: path.join(process.cwd(), 'dist'),
         filename: '[name].[chunkhash].js'
-    },
-    module: {
-        rules: [
-            {
-                test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    use: ['css-loader'],
-                    fallback: 'style-loader'
-                })
-            }
-        ]
     },
     performance: {
         hints: 'warning'

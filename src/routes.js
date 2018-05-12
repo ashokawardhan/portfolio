@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { HashRouter, Route } from 'react-router-dom';
 import universal from 'react-universal-component';
+import styled from 'styled-components';
 import CircularProgress from 'material-ui/CircularProgress';
 import { hot } from 'react-hot-loader';
 import ReactGA from 'react-ga';
 import createHashHistory from 'history/createHashHistory';
 import DrawerContainer from './components/Drawer/Drawer';
-import './styles/styles.css';
 
 if (process.env.NODE_ENV === 'production') {
     ReactGA.initialize('UA-115961362-1', {
@@ -23,16 +23,23 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
-const RefreshIcon = () => (<CircularProgress
+const ContainerDiv = styled.div`
+    @media (min-width: 720px) {
+        margin-left: 256px;
+    }
+`;
+
+const StyledCircularProgress = styled(CircularProgress)`
+    display: inline-block;
+    position: fixed;
+    left: 50%;
+    top: 35%;
+`;
+
+const RefreshIcon = () => (<StyledCircularProgress
     size={200}
     color="#FF9800"
     thickness={5}
-    style={{
-        display: 'inline-block',
-        position: 'fixed',
-        left: '50%',
-        top: '35%'
-    }}
 />);
 
 const UniversalComponent = universal((props) => import(`${props.path}`), {
@@ -50,15 +57,15 @@ const ProjectsComponent = () => <UniversalComponent path="./components/Projects/
 
 const Routes = () => (
     <HashRouter>
-        <div>
+        <Fragment>
             <DrawerContainer />
-            <div className="container">
+            <ContainerDiv>
                 <Route exact path="/" component={AboutComponent} key={Math.random()} />
                 <Route path="/skills" component={SkillsComponent} key={Math.random()} />
                 <Route path="/work" component={WorkComponent} key={Math.random()} />
                 <Route path="/projects" component={ProjectsComponent} key={Math.random()} />
-            </div>
-        </div>
+            </ContainerDiv>
+        </Fragment>
     </HashRouter>
 );
 

@@ -1,5 +1,6 @@
 /* eslint import/no-extraneous-dependencies: 0 */
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     module: {
@@ -32,5 +33,10 @@ module.exports = {
         alias: {
             src: path.join(process.cwd(), 'src')
         }
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: 'src/index.html'
+        })
+    ]
 };
