@@ -1,26 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
-import AppBar from 'material-ui/AppBar';
+import SectionContainer from 'src/components/commons/SectionContainer';
 import CardComponent from 'src/components/Work/card';
 import Experiences from 'src/components/Work/experience';
 
-const StyledAppBar = styled(AppBar)`
-    @media (max-width: 720px) {
-        display: none !important;
-    }
-`;
-
 const Work = () => (
-    <section id="work">
-        <StyledAppBar
-            title="Work"
-            showMenuIconButton={false}
-            zDepth={2}
-        />
+    <SectionContainer id="work" title="Work">
         {
             Experiences.map((experience) => <CardComponent {...experience} key={experience.title} />)
         }
-    </section>
+    </SectionContainer>
 );
 
 export default Work;
