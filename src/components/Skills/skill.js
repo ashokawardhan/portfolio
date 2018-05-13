@@ -3,6 +3,11 @@ import styled from 'styled-components';
 import AppBar from 'material-ui/AppBar';
 import Paper from 'material-ui/Paper';
 import Frontend from './frontend';
+import Backend from './backend';
+import Build from './build';
+import Database from './database';
+import CSS from './css';
+import Mobile from './mobile';
 
 const StyledPaper = styled(Paper)`
     margin-top: 20px;
@@ -36,6 +41,21 @@ const Skills = () => (
         />
         <PaperContainer>
             <Frontend />
+        </PaperContainer>
+        <PaperContainer>
+            <CSS />
+        </PaperContainer>
+        <PaperContainer>
+            <Backend />
+        </PaperContainer>
+        <PaperContainer>
+            <Build />
+        </PaperContainer>
+        <PaperContainer>
+            <Database />
+        </PaperContainer>
+        <PaperContainer>
+            <Mobile />
         </PaperContainer>
     </section>
 );
