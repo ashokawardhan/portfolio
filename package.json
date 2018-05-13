@@ -56,7 +56,7 @@
     "debug": "webpack -p --config webpack/prod.config.js --progress --colors --profile --display-modules --display-reasons --display-error-details --json > dist/stats.json",
     "analyze": "webpack-bundle-analyzer -s gzip dist/stats.json",
     "test": "npm run eslint",
-    "travis": "npm run test && npm run build && npm run deploy",
+    "travis": "npm run test && npm run build",
     "eslint": "eslint src/",
     "fix-lint": "eslint --fix ."
   },
