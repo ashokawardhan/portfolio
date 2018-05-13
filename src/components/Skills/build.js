@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import ImageContainer from '../commons/imageContainer';
-import WebpackImg from '../../images/webpack.png';
-import GulpImg from '../../images/gulp.png';
-import GruntImg from '../../images/grunt.png';
-import GradleImg from '../../images/gradle.png';
-import MavenImg from '../../images/maven.png';
+import ImageContainer from 'src/components/commons/imageContainer';
+import WebpackImg from 'src/images/webpack.png';
+import GulpImg from 'src/images/gulp.png';
+import GruntImg from 'src/images/grunt.png';
+import GradleImg from 'src/images/gradle.png';
+import MavenImg from 'src/images/maven.png';
 
 const CenterH1 = styled.h1`
     text-align: center;

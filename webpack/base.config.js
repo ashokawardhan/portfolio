@@ -29,7 +29,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.png'],
         alias: {
             src: path.join(process.cwd(), 'src')
         }

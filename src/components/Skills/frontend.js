@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import ImageContainer from '../commons/imageContainer';
-import ReactImg from '../../images/react.png';
-import D3Img from '../../images/d3.png';
-import AngularImg from '../../images/angular.png';
-import JSImg from '../../images/js.png';
-import JQueryImg from '../../images/jquery.png';
-import BackboneImg from '../../images/backbone.png';
-import ParseImg from '../../images/parse.png';
-import ReduxImg from '../../images/redux.png';
+import ImageContainer from 'src/components/commons/imageContainer';
+import ReactImg from 'src/images/react.png';
+import D3Img from 'src/images/d3.png';
+import AngularImg from 'src/images/angular.png';
+import JSImg from 'src/images/js.png';
+import JQueryImg from 'src/images/jquery.png';
+import BackboneImg from 'src/images/backbone.png';
+import ParseImg from 'src/images/parse.png';
+import ReduxImg from 'src/images/redux.png';
 
 const CenterH1 = styled.h1`
     text-align: center;

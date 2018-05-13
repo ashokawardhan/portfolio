@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import ImageContainer from '../commons/imageContainer';
-import ReactNative from '../../images/react.png';
-import AndroidImg from '../../images/android.png';
+import ImageContainer from 'src/components/commons/imageContainer';
+import ReactNative from 'src/images/react.png';
+import AndroidImg from 'src/images/android.png';
 
 const CenterH1 = styled.h1`
     text-align: center;
