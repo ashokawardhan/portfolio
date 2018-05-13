@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import ImageContainer from '../commons/imageContainer';
-import PostgreSQLImg from '../../images/postgresql.png';
-import MySQLImg from '../../images/mysql.png';
-import MongoDBImg from '../../images/mongodb.png';
+import ImageContainer from 'src/components/commons/imageContainer';
+import PostgreSQLImg from 'src/images/postgresql.png';
+import MySQLImg from 'src/images/mysql.png';
+import MongoDBImg from 'src/images/mongodb.png';
 
 const CenterH1 = styled.h1`
     text-align: center;

@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import ImageContainer from '../commons/imageContainer';
-import JavaImg from '../../images/java.png';
-import SpringBootImg from '../../images/springboot.png';
-import NettyImg from '../../images/netty.png';
-import PhpImg from '../../images/php.png';
-import NodeImg from '../../images/node.png';
-import ExpressImg from '../../images/express.png';
-import HapiImg from '../../images/hapi.png';
-import AspNetImg from '../../images/aspnet.png';
+import ImageContainer from 'src/components/commons/imageContainer';
+import JavaImg from 'src/images/java.png';
+import SpringBootImg from 'src/images/springboot.png';
+import NettyImg from 'src/images/netty.png';
+import PhpImg from 'src/images/php.png';
+import NodeImg from 'src/images/node.png';
+import ExpressImg from 'src/images/express.png';
+import HapiImg from 'src/images/hapi.png';
+import AspNetImg from 'src/images/aspnet.png';
 
 const CenterH1 = styled.h1`
     text-align: center;

@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import SectionContainer from 'src/components/commons/SectionContainer';
 import Paper from 'material-ui/Paper';
-import Frontend from './frontend';
-import Backend from './backend';
-import Build from './build';
-import Database from './database';
-import CSS from './css';
-import Mobile from './mobile';
+import Frontend from 'src/components/Skills/frontend';
+import Backend from 'src/components/Skills/backend';
+import Build from 'src/components/Skills/build';
+import Database from 'src/components/Skills/database';
+import CSS from 'src/components/Skills/css';
+import Mobile from 'src/components/Skills/mobile';
 
 const StyledPaper = styled(Paper)`
     margin-top: 20px;

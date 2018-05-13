@@ -39,6 +39,7 @@
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.0.4",
     "image-webpack-loader": "^4.1.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.10.2",
     "rimraf": "^2.6.2",
     "style-loader": "^0.20.3",
@@ -46,20 +47,26 @@
     "webpack": "^3.11.0",
     "webpack-bundle-analyzer": "^2.11.1",
     "webpack-dev-server": "^2.11.1",
-    "webpack-merge": "^4.1.2"
+    "webpack-merge": "^4.1.2",
+    "yarn": "^1.6.0"
   },
   "scripts": {
     "clean": "rimraf dist",
-    "build": "NODE_ENV=production npm run clean && webpack -p --config webpack/prod.config.js",
+    "build": "NODE_ENV=production yarn run clean && webpack -p --config webpack/prod.config.js",
+    "build-dist": "yarn run build && git add dist",
     "start": "NODE_ENV=development webpack-dev-server --hot --config webpack/dev.config.js",
     "deploy": "git subtree push --prefix dist origin gh-pages",
     "debug": "webpack -p --config webpack/prod.config.js --progress --colors --profile --display-modules --display-reasons --display-error-details --json > dist/stats.json",
     "analyze": "webpack-bundle-analyzer -s gzip dist/stats.json",
-    "test": "npm run eslint",
-    "travis": "npm run test && npm run build",
+    "test": "yarn run eslint",
+    "travis": "yarn run test && yarn run build",
     "eslint": "eslint src/",
     "fix-lint": "eslint --fix ."
   },
+  "pre-commit": [
+    "test",
+    "build-dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/th3dark0n3/portfolio.git"

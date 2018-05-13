@@ -5,7 +5,7 @@ import { Card, CardText } from 'material-ui/Card';
 import Divider from 'material-ui/Divider';
 import Paper from 'material-ui/Paper';
 import Content from 'src/components/About/content';
-import AboutImg from '../../images/about.jpg';
+import AboutImg from 'src/images/about.jpg';
 
 const AvatarContainer = styled.div`
     margin: 20px;
