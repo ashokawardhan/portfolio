@@ -53,7 +53,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "NODE_ENV=production yarn run clean && webpack -p --config webpack/prod.config.js",
-    "build-dist": "yarn run build && git add dist",
+    "build-dist": "yarn run build && echo awardhan.com > dist/CNAME && git add dist",
     "start": "NODE_ENV=development webpack-dev-server --hot --config webpack/dev.config.js",
     "deploy": "git subtree push --prefix dist origin gh-pages",
     "debug": "webpack -p --config webpack/prod.config.js --progress --colors --profile --display-modules --display-reasons --display-error-details --json > dist/stats.json",
