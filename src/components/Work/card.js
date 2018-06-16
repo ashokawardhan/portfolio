@@ -1,9 +1,12 @@
 import React from 'react';
-import { Card, CardText, CardHeader, CardActions } from 'material-ui/Card';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
+import CardHeader from '@material-ui/core/CardHeader';
 import styled from 'styled-components';
-import Divider from 'material-ui/Divider';
-import Paper from 'material-ui/Paper';
-import RaisedButton from 'material-ui/RaisedButton';
+import Divider from '@material-ui/core/Divider';
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
 
 const openNewTab = (url) => {
     window.open(url, '_blank');
@@ -37,7 +40,7 @@ const StyledPaper = styled(Paper)`
 `;
 
 const CardComponent = (props) => (
-    <StyledPaper zDepth={4}>
+    <StyledPaper elevation={12}>
         <Card>
             <StyledCardHeader
                 title={
@@ -52,12 +55,14 @@ const CardComponent = (props) => (
                 }
             />
             <Divider />
-            <CardText>
+            <CardContent>
                 {props.textComponent()}
-            </CardText>
+            </CardContent>
             <CardActions>
                 {props.links.map((link) => (
-                    <RaisedButton label={link.label} secondary onClick={() => openNewTab(link.url)} key={link.label} />
+                    <Button variant="contained" color="secondary" onClick={() => openNewTab(link.url)} key={link.label}>
+                        {link.label}
+                    </Button>
                 ))}
             </CardActions>
         </Card>

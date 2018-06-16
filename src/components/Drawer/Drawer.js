@@ -1,8 +1,13 @@
 import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
-import Drawer from 'material-ui/Drawer';
-import AppBar from 'material-ui/AppBar';
-import MenuItem from 'material-ui/MenuItem';
+import Drawer from '@material-ui/core/Drawer';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import MenuItem from '@material-ui/core/MenuItem';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 
 const StyledAppBar = styled(AppBar)`
@@ -11,8 +16,15 @@ const StyledAppBar = styled(AppBar)`
     }
 `;
 
+const styles = {
+    drawer: {
+        width: 256
+    }
+};
+
+@withStyles(styles)
 class DrawerContainer extends Component {
-    state = { width: 0, open: true };
+    state = { width: 0, open: window.innerWidth >= 720 };
 
     componentDidMount() {
         this.updateWindowDimensions();
@@ -37,16 +49,30 @@ class DrawerContainer extends Component {
     }
 
     render() {
+        const { classes } = this.props;
         return (
             <Fragment>
                 <StyledAppBar
-                    title="Ashoka Wardhan"
+                    position="sticky"
+                    elevation={2}
                     onClick={this.openDrawer}
-                />
+                >
+                    <Toolbar>
+                        <IconButton color="inherit" aria-label="Menu">
+                            <MenuIcon />
+                        </IconButton>
+                        <Typography variant="title" color="inherit">
+                        Ashoka Wardhan
+                        </Typography>
+                    </Toolbar>
+                </StyledAppBar>
                 <Drawer
                     open={this.state.open}
-                    docked={this.state.width >= 720}
-                    onRequestChange={(open) => this.setState({ open })}
+                    variant={this.state.width >= 720 ? 'permanent' : 'temporary'}
+                    onClose={() => this.setState({ open: false })}
+                    classes={{
+                        paper: classes.drawer
+                    }}
                 >
                     <Link to="/"><MenuItem>About Me</MenuItem></Link>
                     <Link to="/work"><MenuItem>Work</MenuItem></Link>

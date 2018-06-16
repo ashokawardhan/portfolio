@@ -6,7 +6,7 @@ import Experiences from 'src/components/Work/experience';
 const Work = () => (
     <SectionContainer id="work" title="Work">
         {
-            Experiences.map((experience) => <CardComponent {...experience} key={experience.title} />)
+            Experiences.map((experience) => <CardComponent {...experience} key={experience.id} />)
         }
     </SectionContainer>
 );

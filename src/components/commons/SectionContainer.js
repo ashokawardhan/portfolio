@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import AppBar from 'material-ui/AppBar';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 
 const StyledAppBar = styled(AppBar)`
     @media (max-width: 720px) {
@@ -11,10 +13,16 @@ const StyledAppBar = styled(AppBar)`
 const SectionContainer = (props) => (
     <section id={props.id}>
         <StyledAppBar
-            title={props.title}
-            showMenuIconButton={false}
-            zDepth={2}
-        />
+            elevation={2}
+            color="primary"
+            position="sticky"
+        >
+            <Toolbar>
+                <Typography variant="title" color="inherit">
+                    {props.title}
+                </Typography>
+            </Toolbar>
+        </StyledAppBar>
         {props.children}
     </section>
 );

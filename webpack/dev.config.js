@@ -1,11 +1,10 @@
 /* eslint import/no-extraneous-dependencies: 0 */
 const merge = require('webpack-merge');
 const baseConfig = require('./base.config.js');
-const webpack = require('webpack');
 const path = require('path');
 
 module.exports = merge(baseConfig, {
-    devtool: 'source-map',
+    mode: 'development',
     entry: {
         app: [
             'react-hot-loader/patch',
@@ -20,11 +19,5 @@ module.exports = merge(baseConfig, {
     output: {
         path: path.join(process.cwd(), 'dist'),
         filename: '[name].bundle.js'
-    },
-    plugins: [
-        new webpack.NamedModulesPlugin(),
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('development')
-        })
-    ]
+    }
 });

@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import Avatar from 'material-ui/Avatar';
-import { Card, CardText } from 'material-ui/Card';
-import Divider from 'material-ui/Divider';
-import Paper from 'material-ui/Paper';
+import Avatar from '@material-ui/core/Avatar';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Divider from '@material-ui/core/Divider';
+import Paper from '@material-ui/core/Paper';
 import Content from 'src/components/About/content';
+import SectionContainer from 'src/components/commons/SectionContainer';
 import AboutImg from 'src/images/about.jpg';
 
 const AvatarContainer = styled.div`
@@ -31,18 +33,15 @@ const DarkCard = styled(Card)`
     background-color: #F6F6F6;
 `;
 
-const StyledCardText = styled(CardText)`
-    font-size: 30px;
-`;
-
 const StyledAvatar = styled(Avatar)`
     width: 300px !important;
     height: 300px !important;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 60px, rgba(0, 0, 0, 0.22) 0px 15px 20px;
+    display: inline-block !important;
 `;
 
 const About = () => (
-    <div>
+    <SectionContainer id="about" title="Ashoka Wardhan">
         <AvatarContainer>
             <StyledAvatar
                 src={AboutImg}
@@ -50,14 +49,14 @@ const About = () => (
             />
         </AvatarContainer>
         <StyledDivider />
-        <MarginedPaper zDepth={5}>
+        <MarginedPaper elevation={24}>
             <DarkCard>
-                <StyledCardText>
+                <CardContent>
                     <Content />
-                </StyledCardText>
+                </CardContent>
             </DarkCard>
         </MarginedPaper>
-    </div>
+    </SectionContainer>
 );
 
 export default About;

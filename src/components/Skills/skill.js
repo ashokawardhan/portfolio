@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import SectionContainer from 'src/components/commons/SectionContainer';
-import Paper from 'material-ui/Paper';
+import Paper from '@material-ui/core/Paper';
 import Frontend from 'src/components/Skills/frontend';
 import Backend from 'src/components/Skills/backend';
 import Build from 'src/components/Skills/build';
@@ -20,7 +20,7 @@ const StyledPaper = styled(Paper)`
 
 const PaperContainer = (props) => (
     <StyledPaper
-        zDepth={2}
+        elevation={10}
     >
         {props.children}
     </StyledPaper>
