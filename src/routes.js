@@ -67,7 +67,6 @@ const Routes = () => (
                 <Route path="/skills" component={SkillsComponent} key={Math.random()} />
                 <Route path="/work" component={WorkComponent} key={Math.random()} />
                 <Route path="/projects" component={ProjectsComponent} key={Math.random()} />
-                <Route path="/projects" component={ProjectsComponent} key={Math.random()} />
             </ContainerDiv>
         </Fragment>
     </HashRouter>
