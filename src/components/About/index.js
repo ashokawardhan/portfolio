@@ -7,13 +7,17 @@ import Divider from '@material-ui/core/Divider';
 import Paper from '@material-ui/core/Paper';
 import Content from 'src/components/About/content';
 import SectionContainer from 'src/components/commons/SectionContainer';
+import Social from 'src/components/About/social_links';
 import AboutImg from 'src/images/about.jpg';
 
 const AvatarContainer = styled.div`
-    margin: 20px;
     text-align: center;
+`;
+
+const MarginedAvatarContainer = styled.div`
+    margin: 10px 10px 0 10px;
     @media (min-width: 720px) {
-        background-color: #E4DBBF;
+        margin: 20px 20px 0 20px;
     }
 `;
 
@@ -36,18 +40,23 @@ const DarkCard = styled(Card)`
 const StyledAvatar = styled(Avatar)`
     width: 300px !important;
     height: 300px !important;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 60px, rgba(0, 0, 0, 0.22) 0px 15px 20px;
+    @media (min-width: 720px) {
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 60px;
+    }
     display: inline-block !important;
 `;
 
 const About = () => (
     <SectionContainer id="about" title="Ashoka Wardhan">
-        <AvatarContainer>
-            <StyledAvatar
-                src={AboutImg}
-                className="about-image"
-            />
-        </AvatarContainer>
+        <MarginedAvatarContainer>
+            <AvatarContainer>
+                <StyledAvatar
+                    src={AboutImg}
+                    className="about-image"
+                />
+            </AvatarContainer>
+        </MarginedAvatarContainer>
+        <Social />
         <StyledDivider />
         <MarginedPaper elevation={24}>
             <DarkCard>

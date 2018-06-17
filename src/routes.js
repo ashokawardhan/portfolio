@@ -47,7 +47,7 @@ const RefreshIcon = () => (<StyledCircularProgress
 
 const UniversalComponent = universal((props) => import(`${props.path}`), {
     loading: RefreshIcon,
-    minDelay: 1000
+    minDelay: 500
 });
 
 const AboutComponent = () => <UniversalComponent path="./components/About" />;
