@@ -1,6 +1,6 @@
 language: node_js
-before_install:
-  - sudo apt-get install -y libpng-dev
+os: osx
 node_js:
   - "stable"
 script: npm run travis
+cache: yarn
