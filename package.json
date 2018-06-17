@@ -6,7 +6,7 @@
   "dependencies": {
     "@material-ui/core": "^1.2.1",
     "@material-ui/icons": "^1.1.0",
-    "css-loader": "^0.28.10",
+    "css-loader": "^0.28.11",
     "history": "^4.7.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -15,6 +15,7 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-universal-component": "^2.8.4",
+    "react-vertical-timeline-component": "^2.1.2",
     "styled-components": "^3.2.6"
   },
   "devDependencies": {
@@ -37,6 +38,7 @@
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.0.4",
     "image-webpack-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.4.0",
     "pre-commit": "^1.2.2",
     "prettier": "^1.10.2",
     "rimraf": "^2.6.2",
@@ -53,19 +55,18 @@
     "clean": "rimraf dist",
     "build": "NODE_ENV=production npm run clean && webpack -p --config webpack/prod.config.js",
     "build-analyze": "NODE_ENV=production npm run clean && webpack -p --config webpack/prod-analyze.config.js",
-    "build-dist": "npm run build && echo awardhan.com > dist/CNAME && git add dist",
+    "build-dist": "npm run build && echo awardhan.com > dist/CNAME && git add dist && git commit -m 'Deploy site'",
     "start": "NODE_ENV=development webpack-dev-server --hot --config webpack/dev.config.js",
-    "deploy": "git push origin `git subtree split --prefix dist master`:gh-pages --force",
+    "deploy": "npm run build-dist && git push origin `git subtree split --prefix dist master`:gh-pages --force",
     "debug": "webpack -p --config webpack/prod.config.js --progress --colors --profile --display-modules --display-reasons --display-error-details --json > dist/stats.json",
     "analyze": "webpack-bundle-analyzer -s gzip dist/stats.json",
     "test": "npm run eslint",
     "travis": "npm run test && npm run build",
     "eslint": "eslint src/",
-    "fix-lint": "eslint --fix ."
+    "fix-lint": "eslint --fix src/"
   },
   "pre-commit": [
-    "test",
-    "build-dist"
+    "test"
   ],
   "repository": {
     "type": "git",
