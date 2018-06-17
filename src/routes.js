@@ -6,7 +6,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import { hot } from 'react-hot-loader';
 import ReactGA from 'react-ga';
 import createHashHistory from 'history/createHashHistory';
-import DrawerContainer from 'src/components/Drawer/Drawer';
+import DrawerContainer from 'src/components/Drawer';
 
 if (process.env.NODE_ENV === 'production') {
     ReactGA.initialize('UA-115961362-1', {
@@ -50,13 +50,15 @@ const UniversalComponent = universal((props) => import(`${props.path}`), {
     minDelay: 1000
 });
 
-const AboutComponent = () => <UniversalComponent path="./components/About/about" />;
+const AboutComponent = () => <UniversalComponent path="./components/About" />;
 
-const SkillsComponent = () => <UniversalComponent path="./components/Skills/skill" />;
+const SkillsComponent = () => <UniversalComponent path="./components/Skills" />;
 
-const WorkComponent = () => <UniversalComponent path="./components/Work/work" />;
+const WorkComponent = () => <UniversalComponent path="./components/Work" />;
 
-const ProjectsComponent = () => <UniversalComponent path="./components/Projects/projects" />;
+const ProjectsComponent = () => <UniversalComponent path="./components/Projects" />;
+
+const EducationComponent = () => <UniversalComponent path="./components/Education" />;
 
 const Routes = () => (
     <HashRouter>
@@ -67,6 +69,7 @@ const Routes = () => (
                 <Route path="/skills" component={SkillsComponent} key={Math.random()} />
                 <Route path="/work" component={WorkComponent} key={Math.random()} />
                 <Route path="/projects" component={ProjectsComponent} key={Math.random()} />
+                <Route path="/education" component={EducationComponent} key={Math.random()} />
             </ContainerDiv>
         </Fragment>
     </HashRouter>
