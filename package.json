@@ -56,7 +56,7 @@
     "clean": "rimraf dist",
     "build": "NODE_ENV=production npm run clean && webpack -p --config webpack/prod.config.js",
     "build-analyze": "NODE_ENV=production npm run clean && webpack -p --config webpack/prod-analyze.config.js",
-    "build-dist": "npm run build && echo awardhan.com > dist/CNAME && git add dist && git commit -m 'Deploy site'",
+    "build-dist": "npm run build && echo awardhan.com > dist/CNAME && git add dist && git commit -m 'Deploy site' && git push",
     "start": "NODE_ENV=development webpack-dev-server --hot --config webpack/dev.config.js",
     "deploy": "npm run build-dist && git push origin `git subtree split --prefix dist master`:gh-pages --force",
     "debug": "webpack -p --config webpack/prod.config.js --progress --colors --profile --display-modules --display-reasons --display-error-details --json > dist/stats.json",
