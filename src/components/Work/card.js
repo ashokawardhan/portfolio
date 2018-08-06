@@ -48,7 +48,7 @@ const CardComponent = (props) => (
                         {props.title}
                     </StyledHeaderTitle>
                 }
-                subtitle={
+                subheader={
                     <StyledHeaderSubtitle>
                         {props.subtitle()}
                     </StyledHeaderSubtitle>
