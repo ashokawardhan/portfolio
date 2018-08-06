@@ -53,6 +53,7 @@ const About = () => (
                 <StyledAvatar
                     src={AboutImg}
                     className="about-image"
+                    alt="Profile Photo"
                 />
             </AvatarContainer>
         </MarginedAvatarContainer>
