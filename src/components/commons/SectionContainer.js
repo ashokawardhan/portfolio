@@ -10,8 +10,8 @@ const StyledAppBar = styled(AppBar)`
     }
 `;
 
-const SectionContainer = (props) => (
-    <section id={props.id}>
+const SectionContainer = ({ id, title, children }) => (
+    <section id={id}>
         <StyledAppBar
             elevation={2}
             color="primary"
@@ -19,11 +19,11 @@ const SectionContainer = (props) => (
         >
             <Toolbar>
                 <Typography variant="title" color="inherit">
-                    {props.title}
+                    {title}
                 </Typography>
             </Toolbar>
         </StyledAppBar>
-        {props.children}
+        {children}
     </section>
 );
 

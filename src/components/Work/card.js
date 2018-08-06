@@ -39,28 +39,30 @@ const StyledPaper = styled(Paper)`
         }
 `;
 
-const CardComponent = (props) => (
+const CardComponent = ({
+    title, subtitle, textComponent, links
+}) => (
     <StyledPaper elevation={12}>
         <Card>
             <StyledCardHeader
-                title={
+                title={(
                     <StyledHeaderTitle>
-                        {props.title}
+                        {title}
                     </StyledHeaderTitle>
-                }
-                subheader={
+                )}
+                subheader={(
                     <StyledHeaderSubtitle>
-                        {props.subtitle()}
+                        {subtitle()}
                     </StyledHeaderSubtitle>
-                }
+                )}
             />
             <Divider />
             <CardContent>
-                {props.textComponent()}
+                {textComponent()}
             </CardContent>
             <CardActions>
-                {props.links.map((link) => (
-                    <Button variant="contained" color="secondary" onClick={() => openNewTab(link.url)} key={link.label}>
+                {links.map((link) => (
+                    <Button variant="contained" color="primary" onClick={() => openNewTab(link.url)} key={link.label}>
                         {link.label}
                     </Button>
                 ))}

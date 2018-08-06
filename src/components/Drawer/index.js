@@ -30,6 +30,7 @@ class DrawerContainer extends Component {
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions);
     }
+
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateWindowDimensions);
     }
@@ -50,6 +51,7 @@ class DrawerContainer extends Component {
 
     render() {
         const { classes } = this.props;
+        const { open, width } = this.state;
         return (
             <Fragment>
                 <StyledAppBar
@@ -67,18 +69,38 @@ class DrawerContainer extends Component {
                     </Toolbar>
                 </StyledAppBar>
                 <Drawer
-                    open={this.state.open}
-                    variant={this.state.width >= 720 ? 'permanent' : 'temporary'}
+                    open={open}
+                    variant={width >= 720 ? 'permanent' : 'temporary'}
                     onClose={() => this.setState({ open: false })}
                     classes={{
                         paper: classes.drawer
                     }}
                 >
-                    <Link to="/"><MenuItem>About Me</MenuItem></Link>
-                    <Link to="/work"><MenuItem>Work</MenuItem></Link>
-                    <Link to="/skills"><MenuItem>Skills</MenuItem></Link>
-                    <Link to="/projects"><MenuItem>Projects</MenuItem></Link>
-                    <Link to="/education"><MenuItem>Education</MenuItem></Link>
+                    <Link to="/">
+                        <MenuItem role="link">
+                            About Me
+                        </MenuItem>
+                    </Link>
+                    <Link to="/work">
+                        <MenuItem role="link">
+                            Work
+                        </MenuItem>
+                    </Link>
+                    <Link to="/skills">
+                        <MenuItem role="link">
+                            Skills
+                        </MenuItem>
+                    </Link>
+                    <Link to="/projects">
+                        <MenuItem role="link">
+                            Projects
+                        </MenuItem>
+                    </Link>
+                    <Link to="/education">
+                        <MenuItem role="link">
+                            Education
+                        </MenuItem>
+                    </Link>
                 </Drawer>
             </Fragment>
         );

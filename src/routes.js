@@ -39,13 +39,15 @@ const StyledCircularProgress = styled(CircularProgress)`
     top: 35%;
 `;
 
-const RefreshIcon = () => (<StyledCircularProgress
-    size={200}
-    style={{ color: '#FF9800' }}
-    thickness={5}
-/>);
+const RefreshIcon = () => (
+    <StyledCircularProgress
+        size={200}
+        style={{ color: '#FF9800' }}
+        thickness={5}
+    />
+);
 
-const UniversalComponent = universal((props) => import(`${props.path}`), {
+const UniversalComponent = universal(({ path }) => import(`${path}`), {
     loading: RefreshIcon,
     minDelay: 500
 });

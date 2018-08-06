@@ -14,10 +14,12 @@ const styles = {
     }
 };
 
-const Personal = (props) => (
+const Personal = ({ classes }) => (
     <Fragment>
-        <CenterH1>Personal</CenterH1>
-        <Grid container className={props.classes.root} spacing={16}>
+        <CenterH1>
+            Personal
+        </CenterH1>
+        <Grid container className={classes.root} spacing={16}>
             {
                 PersonalList.map((project) => <CardComponent {...project} key={project.id} />)
             }

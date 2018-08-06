@@ -15,7 +15,9 @@ const ImageContainerWrapper = styled.div`
 
 const frontend = () => (
     <Fragment>
-        <CenterH1>Mobile Development</CenterH1>
+        <CenterH1>
+            Mobile Development
+        </CenterH1>
         <ImageContainerWrapper>
             <ImageContainer src={ReactNative} text="React Native" />
             <ImageContainer src={AndroidImg} text="Android" />

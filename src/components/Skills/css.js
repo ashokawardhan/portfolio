@@ -19,7 +19,9 @@ const ImageContainerWrapper = styled.div`
 
 const frontend = () => (
     <Fragment>
-        <CenterH1>Styling</CenterH1>
+        <CenterH1>
+            Styling
+        </CenterH1>
         <ImageContainerWrapper>
             <ImageContainer src={Css3Img} text="CSS 3" />
             <ImageContainer src={SassImg} text="SASS" />

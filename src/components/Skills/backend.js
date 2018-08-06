@@ -21,7 +21,9 @@ const ImageContainerWrapper = styled.div`
 
 const frontend = () => (
     <Fragment>
-        <CenterH1>Back End</CenterH1>
+        <CenterH1>
+            Back End
+        </CenterH1>
         <ImageContainerWrapper>
             <ImageContainer src={JavaImg} text="Java" />
             <ImageContainer src={SpringBootImg} text="Spring Boot" />

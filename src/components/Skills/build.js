@@ -18,7 +18,9 @@ const ImageContainerWrapper = styled.div`
 
 const frontend = () => (
     <Fragment>
-        <CenterH1>Build Tools</CenterH1>
+        <CenterH1>
+            Build Tools
+        </CenterH1>
         <ImageContainerWrapper>
             <ImageContainer src={WebpackImg} text="Webpack" />
             <ImageContainer src={GulpImg} text="Gulp" />

@@ -6,14 +6,21 @@ export default [
         id: 0,
         subtitle: () => (
             <React.Fragment>
-                <div><b>Expedia</b></div>
-                <div>March 2018 - Present</div>
+                <div>
+                    <b>
+                        Expedia
+                    </b>
+                </div>
+                <div>
+                    March 2018 - Present
+                </div>
             </React.Fragment>
         ),
         textComponent: () => (
             <React.Fragment>
                 <p>
-                    {'- Frontend developer on ReactJS, Redux, and Backbone'}<br />
+                    {'- Frontend developer on ReactJS, Redux, and Backbone'}
+                    <br />
                     {'- Backend developer on NodeJS and Java'}
                 </p>
                 <p>
@@ -33,14 +40,21 @@ export default [
         id: 1,
         subtitle: () => (
             <React.Fragment>
-                <div><b>Expedia</b></div>
-                <div>February 2017 - March 2018</div>
+                <div>
+                    <b>
+                        Expedia
+                    </b>
+                </div>
+                <div>
+                    February 2017 - March 2018
+                </div>
             </React.Fragment>
         ),
         textComponent: () => (
             <React.Fragment>
                 <p>
-                    {'- Frontend developer on ReactJS, Redux, and Backbone'}<br />
+                    {'- Frontend developer on ReactJS, Redux, and Backbone'}
+                    <br />
                     {'- Backend developer in Java'}
                 </p>
                 <p>
@@ -60,8 +74,14 @@ export default [
         id: 2,
         subtitle: () => (
             <React.Fragment>
-                <div><b>GreyOrange Pte Ltd</b></div>
-                <div>June 2016 - February 2017</div>
+                <div>
+                    <b>
+                        GreyOrange Pte Ltd
+                    </b>
+                </div>
+                <div>
+                    June 2016 - February 2017
+                </div>
             </React.Fragment>
         ),
         textComponent: () => (
@@ -86,15 +106,23 @@ export default [
         id: 3,
         subtitle: () => (
             <React.Fragment>
-                <div><b>Ravgins</b></div>
-                <div>May 2015 - July 2015, January 2016 - June 2016</div>
+                <div>
+                    <b>
+                        Ravgins
+                    </b>
+                </div>
+                <div>
+                    May 2015 - July 2015, January 2016 - June 2016
+                </div>
             </React.Fragment>
         ),
         textComponent: () => (
             <React.Fragment>
                 <p>
-                    {'- Android Developer (SafelyHome Android Application)'}<br />
-                    {'- Backend Developer(Backend for Application and web-analytics)'}<br />
+                    {'- Android Developer (SafelyHome Android Application)'}
+                    <br />
+                    {'- Backend Developer(Backend for Application and web-analytics)'}
+                    <br />
                     {'- Web Developer(Development of www.TotalVisible.com and www.safelyhome.com)'}
                 </p>
             </React.Fragment>
@@ -115,14 +143,21 @@ export default [
         id: 4,
         subtitle: () => (
             <React.Fragment>
-                <div><b>PurpleBerry Labs</b></div>
-                <div>December 2014 - January 2015</div>
+                <div>
+                    <b>
+                        PurpleBerry Labs
+                    </b>
+                </div>
+                <div>
+                    December 2014 - January 2015
+                </div>
             </React.Fragment>
         ),
         textComponent: () => (
             <React.Fragment>
                 <p>
-                    {'- Worked on creating backend APIs for Android App.'}<br />
+                    {'- Worked on creating backend APIs for Android App.'}
+                    <br />
                     {'- Worked with connecting MongoDB and Java Netty.io'}
                 </p>
             </React.Fragment>
@@ -139,8 +174,14 @@ export default [
         id: 5,
         subtitle: () => (
             <React.Fragment>
-                <div><b>3HD Media</b></div>
-                <div>May 2013 - July 2013</div>
+                <div>
+                    <b>
+                        3HD Media
+                    </b>
+                </div>
+                <div>
+                    May 2013 - July 2013
+                </div>
             </React.Fragment>
         ),
         textComponent: () => (

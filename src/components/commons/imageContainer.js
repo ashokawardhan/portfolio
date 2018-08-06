@@ -16,10 +16,12 @@ const StyledImage = styled.img`
     display: block;
 `;
 
-const ImageContainer = (props) => (
+const ImageContainer = ({ src, text }) => (
     <StyledImageContainer>
-        <StyledImage src={props.src} alt={props.text} />
-        <span>{props.text}</span>
+        <StyledImage src={src} alt={text} />
+        <span>
+            {text}
+        </span>
     </StyledImageContainer>
 );
 

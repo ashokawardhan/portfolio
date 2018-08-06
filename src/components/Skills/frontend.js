@@ -21,7 +21,9 @@ const ImageContainerWrapper = styled.div`
 
 const frontend = () => (
     <Fragment>
-        <CenterH1>Front End</CenterH1>
+        <CenterH1>
+            Front End
+        </CenterH1>
         <ImageContainerWrapper>
             <ImageContainer src={ReactImg} text="React" />
             <ImageContainer src={ReduxImg} text="Redux" />

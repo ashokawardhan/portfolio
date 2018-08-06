@@ -1,9 +1,9 @@
 /* eslint import/no-extraneous-dependencies: 0 */
 const merge = require('webpack-merge');
-const baseConfig = require('./base.config.js');
 const webpack = require('webpack');
 const path = require('path');
 const CompressionPlugin = require('compression-webpack-plugin');
+const baseConfig = require('./base.config.js');
 
 const VENDOR_LIBS = [
     'react', 'styled-components', 'react-dom', 'react-router', 'react-router-dom', 'react-ga', 'history', 'react-universal-component', 'jss'

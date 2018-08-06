@@ -36,22 +36,22 @@ class CardComponent extends Component {
             <Grid item xs={12} sm={6}>
                 <Card onClick={this.openNewTab} classes={{ root: props.classes.root }}>
                     <StyledCardHeader
-                        title={
+                        title={(
                             <StyledHeaderTitle>
                                 {props.title}
                             </StyledHeaderTitle>
-                        }
+                        )}
                     />
                     <Divider />
                     <CardContent>
                         {props.textComponent()}
                     </CardContent>
                     <CardActions>
-                        {props.link &&
-                            <Button variant="contained" color="secondary">
+                        {props.link && (
+                            <Button variant="contained" color="primary">
                                 {props.link.label}
                             </Button>
-                        }
+                        )}
                     </CardActions>
                 </Card>
             </Grid>

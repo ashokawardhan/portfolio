@@ -17,12 +17,14 @@ const TimelineContent = () => (
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<CertificateIcon />}
         >
-            <h3 className="vertical-timeline-element-title">{'Webpack 2: The Complete Developer\'s Guide'}</h3>
+            <h3 className="vertical-timeline-element-title">
+                {'Webpack 2: The Complete Developer\'s Guide'}
+            </h3>
             <p>
                 How to use webpack from start in React application
             </p>
             <p>
-                <Button variant="contained" color="secondary" onClick={() => openNewTab('https://www.udemy.com/certificate/UC-EKR3R6J0/')}>
+                <Button variant="contained" color="primary" onClick={() => openNewTab('https://www.udemy.com/certificate/UC-EKR3R6J0/')}>
                     Webpack cerificate
                 </Button>
             </p>
@@ -33,12 +35,14 @@ const TimelineContent = () => (
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<CertificateIcon />}
         >
-            <h3 className="vertical-timeline-element-title">The complete React Native and Redux Course</h3>
+            <h3 className="vertical-timeline-element-title">
+                The complete React Native and Redux Course
+            </h3>
             <p>
                 How to use React Native and Redux together in an application
             </p>
             <p>
-                <Button variant="contained" color="secondary" onClick={() => openNewTab('https://www.udemy.com/certificate/UC-QOYOPJMZ/')}>
+                <Button variant="contained" color="primary" onClick={() => openNewTab('https://www.udemy.com/certificate/UC-QOYOPJMZ/')}>
                     React Native cerificate
                 </Button>
             </p>
@@ -49,12 +53,14 @@ const TimelineContent = () => (
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<CertificateIcon />}
         >
-            <h3 className="vertical-timeline-element-title">Designing Gamification Level 1</h3>
+            <h3 className="vertical-timeline-element-title">
+                Designing Gamification Level 1
+            </h3>
             <p>
                 How to create gamification around normal website activites
             </p>
             <p>
-                <Button variant="contained" color="secondary" onClick={() => openNewTab('https://www.udemy.com/certificate/UC-K8MCMHAR/')}>
+                <Button variant="contained" color="primary" onClick={() => openNewTab('https://www.udemy.com/certificate/UC-K8MCMHAR/')}>
                     Gamification Level I cerificate
                 </Button>
             </p>
@@ -65,11 +71,17 @@ const TimelineContent = () => (
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<SchoolIcon />}
         >
-            <h3 className="vertical-timeline-element-title">IIIT Allahabad</h3>
-            <h4 className="vertical-timeline-element-subtitle">B. Tech (IT)</h4>
+            <h3 className="vertical-timeline-element-title">
+                IIIT Allahabad
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+                B. Tech (IT)
+            </h4>
             <p>
-                Open Source Co-ordinator<br />
-                Firefox Student Ambassador<br />
+                Open Source Co-ordinator
+                <br />
+                Firefox Student Ambassador
+                <br />
                 City Co-ordinator of CAG Allahabad Chapter
             </p>
         </VerticalTimelineElement>
@@ -79,8 +91,12 @@ const TimelineContent = () => (
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<SchoolIcon />}
         >
-            <h3 className="vertical-timeline-element-title">Sarvodaya Senior Secondary School</h3>
-            <h4 className="vertical-timeline-element-subtitle">Class 12th</h4>
+            <h3 className="vertical-timeline-element-title">
+                Sarvodaya Senior Secondary School
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+                Class 12th
+            </h4>
             <p>
                 Science with Computer Science
             </p>
@@ -91,8 +107,12 @@ const TimelineContent = () => (
             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
             icon={<SchoolIcon />}
         >
-            <h3 className="vertical-timeline-element-title">Air Force Golden Jubilee Institute</h3>
-            <h4 className="vertical-timeline-element-subtitle">Class 10th</h4>
+            <h3 className="vertical-timeline-element-title">
+                Air Force Golden Jubilee Institute
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+                Class 10th
+            </h4>
         </VerticalTimelineElement>
         <VerticalTimelineElement
             iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}

@@ -14,11 +14,11 @@ const StyledPaper = styled(Paper)`
     background-color: #FFF;
 `;
 
-const PaperContainer = (props) => (
+const PaperContainer = ({ children }) => (
     <StyledPaper
         elevation={20}
     >
-        {props.children}
+        {children}
     </StyledPaper>
 );
 

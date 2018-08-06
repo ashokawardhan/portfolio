@@ -16,7 +16,9 @@ const ImageContainerWrapper = styled.div`
 
 const frontend = () => (
     <Fragment>
-        <CenterH1>Databases</CenterH1>
+        <CenterH1>
+            Databases
+        </CenterH1>
         <ImageContainerWrapper>
             <ImageContainer src={PostgreSQLImg} text="PostgreSQL" />
             <ImageContainer src={MySQLImg} text="MySQL" />
