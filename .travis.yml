@@ -3,4 +3,4 @@ os: osx
 node_js:
   - "stable"
 script: npm run travis
-cache: yarn
+cache: npm
