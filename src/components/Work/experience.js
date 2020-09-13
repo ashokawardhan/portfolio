@@ -1,200 +1,223 @@
-import React from 'react';
+import React from "react";
 
 export default [
     {
-        title: 'Software Developement Engineer I',
-        id: 0,
+        title: "Software Developement Engineer II",
         subtitle: () => (
-            <React.Fragment>
+            <>
                 <div>
-                    <b>
-                        Expedia
-                    </b>
+                    <b>Swiggy</b>
                 </div>
-                <div>
-                    March 2018 - Present
-                </div>
-            </React.Fragment>
+                <div>Mar 2020 - Present</div>
+            </>
         ),
         textComponent: () => (
-            <React.Fragment>
+            <>
                 <p>
-                    {'- Frontend developer on ReactJS, Redux, and Backbone'}
+                    - Frontend Developer using ReactJS and Redux
                     <br />
-                    {'- Backend developer on NodeJS and Java'}
+                    - Backend developer using NodeJS
                 </p>
                 <p>
-                    {'- Received an award for Openness (new ideas, people and changes)'}
+                    - Working on multiple features that are used daily in Swiggy consumer journey
+                    <br />
+                    <b>
+                        - Worked on a collaboration project between Swiggy and Karnataka Government to help people during COVID
+                    </b>
+                    <br />
+                    - Working on new projects like Swiggy Stores and Instamart
                 </p>
-            </React.Fragment>
+            </>
+        )
+    },
+    {
+        title: "Software Developement Engineer I",
+        subtitle: () => (
+            <>
+                <div>
+                    <b>Swiggy</b>
+                </div>
+                <div>Feb 2019 - Mar 2020</div>
+            </>
+        ),
+        textComponent: () => (
+            <>
+                <p>
+                    - Frontend Developer using ReactJS and Redux
+                    <br />
+                    - Backend developer using NodeJS
+                </p>
+                <p>
+                    - Worked on multiple features that are used daily in Swiggy consumer journey
+                    <br />
+                    - Worked on Google lens implementation for use in Swiggy website
+                </p>
+            </>
+        )
+    },
+    {
+        title: "Software Developement Engineer I",
+        subtitle: () => (
+            <>
+                <div>
+                    <b>Expedia</b>
+                </div>
+                <div>March 2018 - Feb 2019</div>
+            </>
+        ),
+        textComponent: () => (
+            <>
+                <p>
+                    - Frontend developer on ReactJS, Redux, and Backbone
+                    <br />
+                    - Backend developer on NodeJS and Java
+                </p>
+                <p>
+                    - Received an award for Openness (new ideas, people and changes)
+                </p>
+            </>
         ),
         links: [
             {
-                url: 'https://www.npmjs.com/package/babel-plugin-transform-es2015-modules-simple-desctructure-amd',
-                label: 'babel-amd-plugin'
+                url:
+                    "https://www.npmjs.com/package/babel-plugin-transform-es2015-modules-simple-desctructure-amd",
+                label: "babel-amd-plugin"
             }
         ]
     },
     {
-        title: 'Associate Software Developement Engineer',
-        id: 1,
+        title: "Associate Software Developement Engineer",
         subtitle: () => (
-            <React.Fragment>
+            <>
                 <div>
-                    <b>
-                        Expedia
-                    </b>
+                    <b>Expedia</b>
                 </div>
-                <div>
-                    February 2017 - March 2018
-                </div>
-            </React.Fragment>
+                <div>February 2017 - March 2018</div>
+            </>
         ),
         textComponent: () => (
-            <React.Fragment>
+            <>
                 <p>
-                    {'- Frontend developer on ReactJS, Redux, and Backbone'}
+                    - Frontend developer on ReactJS, Redux, and Backbone
                     <br />
-                    {'- Backend developer in Java'}
+                    - Backend developer in Java
                 </p>
-                <p>
-                    {'- Led efforts to move to ES6'}
-                </p>
-            </React.Fragment>
+                <p>- Led efforts to move to ES6</p>
+            </>
         ),
         links: [
             {
-                url: 'https://docs.google.com/presentation/d/1-ghXKrPGRvLcFTJoi1nRinvZ_djpb3ePFGLTVeNxtvc/',
-                label: 'ES6 Javascript'
+                url:
+                    "https://docs.google.com/presentation/d/1-ghXKrPGRvLcFTJoi1nRinvZ_djpb3ePFGLTVeNxtvc/",
+                label: "ES6 Javascript"
             }
         ]
     },
     {
-        title: 'Software Developer',
-        id: 2,
+        title: "Software Developer",
         subtitle: () => (
-            <React.Fragment>
+            <>
                 <div>
-                    <b>
-                        GreyOrange Pte Ltd
-                    </b>
+                    <b>GreyOrange Pte Ltd</b>
                 </div>
-                <div>
-                    June 2016 - February 2017
-                </div>
-            </React.Fragment>
+                <div>June 2016 - February 2017</div>
+            </>
         ),
         textComponent: () => (
-            <React.Fragment>
-                <p>
-                    {'- Frontend developer on ReactJS, Redux'}
-                </p>
-                <p>
-                    {'- First frontend developer in team, learnt on the job'}
-                </p>
-            </React.Fragment>
+            <>
+                <p>- Frontend developer on ReactJS, Redux</p>
+                <p>- First frontend developer in team, learnt on the job</p>
+            </>
         ),
         links: [
             {
-                url: 'https://www.slideshare.net/AshokaChandraWardhan/redux-tech-talk',
-                label: 'Redux Tech Talk'
+                url:
+                    "https://www.slideshare.net/AshokaChandraWardhan/redux-tech-talk",
+                label: "Redux Tech Talk"
             }
         ]
     },
     {
-        title: 'Full Stack Developer (Intern)',
-        id: 3,
+        title: "Full Stack Developer (Intern)",
         subtitle: () => (
-            <React.Fragment>
+            <>
                 <div>
-                    <b>
-                        Ravgins
-                    </b>
+                    <b>Ravgins</b>
                 </div>
-                <div>
-                    May 2015 - July 2015, January 2016 - June 2016
-                </div>
-            </React.Fragment>
+                <div>May 2015 - July 2015, January 2016 - June 2016</div>
+            </>
         ),
         textComponent: () => (
-            <React.Fragment>
+            <>
                 <p>
-                    {'- Android Developer (SafelyHome Android Application)'}
+                    - Android Developer (SafelyHome Android Application)
                     <br />
-                    {'- Backend Developer(Backend for Application and web-analytics)'}
+                    - Backend Developer(Backend for Application and web-analytics)
                     <br />
-                    {'- Web Developer(Development of www.TotalVisible.com and www.safelyhome.com)'}
+                    - Web Developer(Development of www.TotalVisible.com and www.safelyhome.com)
                 </p>
-            </React.Fragment>
+            </>
         ),
         links: [
             {
-                url: 'https://play.google.com/store/apps/details?id=com.ravgins.android.earlyy&hl=en',
-                label: 'Total Visible'
+                url:
+                    "https://play.google.com/store/apps/details?id=com.ravgins.android.earlyy&hl=en",
+                label: "Total Visible"
             },
             {
-                url: 'https://play.google.com/store/apps/details?id=com.ravgins.safely.home&hl=en',
-                label: 'Safely Home'
+                url:
+                    "https://play.google.com/store/apps/details?id=com.ravgins.safely.home&hl=en",
+                label: "Safely Home"
             }
         ]
     },
     {
-        title: 'Backend Developer Intern',
-        id: 4,
+        title: "Backend Developer Intern",
         subtitle: () => (
-            <React.Fragment>
+            <>
                 <div>
-                    <b>
-                        PurpleBerry Labs
-                    </b>
+                    <b>PurpleBerry Labs</b>
                 </div>
-                <div>
-                    December 2014 - January 2015
-                </div>
-            </React.Fragment>
+                <div>December 2014 - January 2015</div>
+            </>
         ),
         textComponent: () => (
-            <React.Fragment>
+            <>
                 <p>
-                    {'- Worked on creating backend APIs for Android App.'}
+                    - Worked on creating backend APIs for Android App.
                     <br />
-                    {'- Worked with connecting MongoDB and Java Netty.io'}
+                    - Worked with connecting MongoDB and Java Netty.io
                 </p>
-            </React.Fragment>
+            </>
         ),
         links: [
             {
-                url: 'http://www.purpleberrylabs.com/',
-                label: 'PurpleBerry Labs'
+                url: "http://www.purpleberrylabs.com/",
+                label: "PurpleBerry Labs"
             }
         ]
     },
     {
-        title: 'Engineering Intern',
-        id: 5,
+        title: "Engineering Intern",
         subtitle: () => (
-            <React.Fragment>
+            <>
                 <div>
-                    <b>
-                        3HD Media
-                    </b>
+                    <b>3HD Media</b>
                 </div>
-                <div>
-                    May 2013 - July 2013
-                </div>
-            </React.Fragment>
+                <div>May 2013 - July 2013</div>
+            </>
         ),
         textComponent: () => (
-            <React.Fragment>
+            <>
                 <p>
-                    {'- Created a website for Job search using ASP.Net and C# and SQL as backend.'}
+                    - Created a website for Job search using ASP.Net and C# and SQL as backend.
                 </p>
-            </React.Fragment>
+            </>
         ),
         links: [
             {
-                url: 'http://3hdmedia.com/',
-                label: '3HD Media'
+                url: "http://3hdmedia.com/",
+                label: "3HD Media"
             }
         ]
     }

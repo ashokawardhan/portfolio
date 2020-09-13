@@ -1,30 +1,28 @@
-import React, { Fragment } from 'react';
-import styled from 'styled-components';
-import Grid from '@material-ui/core/Grid';
-import { withStyles } from '@material-ui/core/styles';
-import CollegeList from 'src/components/Projects/college-list';
-import CardComponent from 'src/components/Projects/card';
+import React from "react";
+import styled from "styled-components";
+import Grid from "@material-ui/core/Grid";
+import { withStyles } from "@material-ui/core/styles";
+import CollegeList from "src/components/Projects/college-list";
+import CardComponent from "src/components/Projects/card";
 
 const CenterH1 = styled.h1`
     text-align: center;
 `;
 const styles = {
     root: {
-        flexGrow: 1,
+        flexGrow: 1
     }
 };
 
 const College = ({ classes }) => (
-    <Fragment>
-        <CenterH1>
-            College
-        </CenterH1>
-        <Grid container className={classes.root} spacing={16}>
-            {
-                CollegeList.map((project) => <CardComponent {...project} key={project.id} />)
-            }
+    <>
+        <CenterH1>College</CenterH1>
+        <Grid container className={classes.root} spacing={2}>
+            {CollegeList.map((project) => (
+                <CardComponent {...project} key={project.id} />
+            ))}
         </Grid>
-    </Fragment>
+    </>
 );
 
 export default withStyles(styles)(College);

@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const StyledImageContainer = styled.div`
     text-align: center;
@@ -19,9 +19,7 @@ const StyledImage = styled.img`
 const ImageContainer = ({ src, text }) => (
     <StyledImageContainer>
         <StyledImage src={src} alt={text} />
-        <span>
-            {text}
-        </span>
+        <span>{text}</span>
     </StyledImageContainer>
 );
 

@@ -1,14 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
-import Avatar from '@material-ui/core/Avatar';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Divider from '@material-ui/core/Divider';
-import Paper from '@material-ui/core/Paper';
-import Content from 'src/components/About/content';
-import SectionContainer from 'src/components/commons/SectionContainer';
-import Social from 'src/components/About/social_links';
-import AboutImg from 'src/images/about.jpg';
+import React from "react";
+import styled from "styled-components";
+import Avatar from "@material-ui/core/Avatar";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import Divider from "@material-ui/core/Divider";
+import Paper from "@material-ui/core/Paper";
+import Content from "src/components/About/content";
+import SectionContainer from "src/components/commons/SectionContainer";
+import Social from "src/components/About/social_links";
+import AboutImg from "src/images/about.jpg";
 
 const AvatarContainer = styled.div`
     text-align: center;
@@ -34,7 +34,7 @@ const MarginedPaper = styled(Paper)`
 `;
 
 const DarkCard = styled(Card)`
-    background-color: #F6F6F6;
+    background-color: #f6f6f6;
 `;
 
 const StyledAvatar = styled(Avatar)`
@@ -47,7 +47,7 @@ const StyledAvatar = styled(Avatar)`
 `;
 
 const About = () => (
-    <SectionContainer id="about" title="Ashoka Wardhan">
+    <SectionContainer id="about" title="Ashoka Chandra Wardhan">
         <MarginedAvatarContainer>
             <AvatarContainer>
                 <StyledAvatar

@@ -1,76 +1,63 @@
-import React from 'react';
+import React from "react";
 
 export default [
     {
-        title: 'This Portfolio',
+        title: "This Portfolio",
         id: 0,
         textComponent: () => (
-            <React.Fragment>
+            <>
+                <p>Contains the code for this website</p>
                 <p>
-                    {'Contains the code for this website'}
+                    Tech used: React, styled-components, material-ui, react-router, google analytics
                 </p>
-                <p>
-                    {'Tech used: React, styled-components, material-ui, react-router, google analytics'}
-                </p>
-            </React.Fragment>
+            </>
         ),
         link: {
-            url: 'https://github.com/th3dark0n3/portfolio',
-            label: 'Github'
+            url: "https://github.com/ashokawardhan/portfolio",
+            label: "Github"
         }
     },
     {
-        title: 'Babel AMD transformer',
+        title: "Babel AMD transformer",
         id: 1,
         textComponent: () => (
-            <React.Fragment>
-                <p>
-                    {'Converts ES6 import to AMDJS format'}
-                </p>
-                <p>
-                    {'Tech used: Babel parser'}
-                </p>
-            </React.Fragment>
+            <>
+                <p>Converts ES6 import to AMDJS format</p>
+                <p>Tech used: Babel parser</p>
+            </>
         ),
         link: {
-            url: 'https://github.com/th3dark0n3/babel-plugin-transform-es2015-modules-simple-destructure-amd',
-            label: 'Github'
+            url:
+                "https://github.com/ashokawardhan/babel-plugin-transform-es2015-modules-simple-destructure-amd",
+            label: "Github"
         }
     },
     {
-        title: 'JSON Benchmark',
+        title: "JSON Benchmark",
         id: 2,
         textComponent: () => (
-            <React.Fragment>
-                <p>
-                    {'Benchmark various JSON libraries in Java'}
-                </p>
-                <p>
-                    {'Tech used: Jackson, Gson, JSON-lib'}
-                </p>
-            </React.Fragment>
+            <>
+                <p>Benchmark various JSON libraries in Java</p>
+                <p>Tech used: Jackson, Gson, JSON-lib</p>
+            </>
         ),
         link: {
-            url: 'https://github.com/th3dark0n3/json_benchmark',
-            label: 'Github'
+            url: "https://github.com/ashokawardhan/json_benchmark",
+            label: "Github"
         }
     },
     {
-        title: 'Expandable List React',
+        title: "Expandable List React",
         id: 3,
         textComponent: () => (
-            <React.Fragment>
-                <p>
-                    {'React Component for expandable table using list tags'}
-                </p>
-                <p>
-                    {'Tech used: React'}
-                </p>
-            </React.Fragment>
+            <>
+                <p>React Component for expandable table using list tags</p>
+                <p>Tech used: React</p>
+            </>
         ),
         link: {
-            url: 'https://github.com/th3dark0n3/ExpandableListReact',
-            label: 'Github'
+            url: "https://github.com/ashokawardhan/ExpandableListReact",
+            label: "Github"
         }
     }
 ];

@@ -1,14 +1,14 @@
-import React, { Fragment } from 'react';
-import styled from 'styled-components';
-import ImageContainer from 'src/components/commons/imageContainer';
-import ReactImg from 'src/images/react.png';
-import D3Img from 'src/images/d3.png';
-import AngularImg from 'src/images/angular.png';
-import JSImg from 'src/images/js.png';
-import JQueryImg from 'src/images/jquery.png';
-import BackboneImg from 'src/images/backbone.png';
-import ParseImg from 'src/images/parse.png';
-import ReduxImg from 'src/images/redux.png';
+import React from "react";
+import styled from "styled-components";
+import ImageContainer from "src/components/commons/imageContainer";
+import ReactImg from "src/images/react.png";
+import D3Img from "src/images/d3.png";
+import AngularImg from "src/images/angular.png";
+import JSImg from "src/images/js.png";
+import JQueryImg from "src/images/jquery.png";
+import BackboneImg from "src/images/backbone.png";
+import ParseImg from "src/images/parse.png";
+import ReduxImg from "src/images/redux.png";
 
 const CenterH1 = styled.h1`
     text-align: center;
@@ -20,10 +20,8 @@ const ImageContainerWrapper = styled.div`
 `;
 
 const frontend = () => (
-    <Fragment>
-        <CenterH1>
-            Front End
-        </CenterH1>
+    <>
+        <CenterH1>Front End</CenterH1>
         <ImageContainerWrapper>
             <ImageContainer src={ReactImg} text="React" />
             <ImageContainer src={ReduxImg} text="Redux" />
@@ -34,7 +32,7 @@ const frontend = () => (
             <ImageContainer src={BackboneImg} text="Backbone.js" />
             <ImageContainer src={ParseImg} text="Parse" />
         </ImageContainerWrapper>
-    </Fragment>
+    </>
 );
 
 export default frontend;

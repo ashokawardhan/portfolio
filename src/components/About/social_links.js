@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import Paper from '@material-ui/core/Paper';
-import { SocialIcon } from 'react-social-icons';
+import React from "react";
+import styled from "styled-components";
+import Paper from "@material-ui/core/Paper";
+import { SocialIcon } from "react-social-icons";
 
 const StyledSocialIcon = styled(SocialIcon)`
     margin-left: 5px;
@@ -23,10 +23,13 @@ const MarginedPaper = styled(Paper)`
 const Social = () => (
     <MarginedPaper elevation={10}>
         <StyledSocialIcon url="https://www.linkedin.com/in/ashokacw/" />
-        <StyledSocialIcon url="https://github.com/th3dark0n3" />
-        <StyledSocialIcon url="https://medium.com/@thedarkone" />
+        <StyledSocialIcon url="https://github.com/ashokawardhan" />
+        <StyledSocialIcon url="https://medium.com/@ashokawardhan" />
         <StyledSocialIcon url="https://twitter.com/ashokawardhan" />
-        <StyledSocialIcon url="https://devrant.com/users/thedarkone" network="rss" />
+        <StyledSocialIcon
+            url="https://devrant.com/users/thedarkone"
+            network="rss"
+        />
         <StyledSocialIcon url="https://www.facebook.com/Ash.CW" />
         <StyledSocialIcon url="mailto:ashokwardha@gmail.com" />
     </MarginedPaper>

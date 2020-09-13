@@ -1,18 +1,17 @@
-import React, { Fragment } from 'react';
-import { HashRouter, Route } from 'react-router-dom';
-import universal from 'react-universal-component';
-import styled from 'styled-components';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { hot } from 'react-hot-loader';
-import ReactGA from 'react-ga';
-import createHashHistory from 'history/createHashHistory';
-import DrawerContainer from 'src/components/Drawer';
+import React from "react";
+import { HashRouter, Route } from "react-router-dom";
+import universal from "react-universal-component";
+import styled from "styled-components";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import ReactGA from "react-ga";
+import { createHashHistory } from "history";
+import DrawerContainer from "src/components/Drawer";
 
-if (process.env.NODE_ENV === 'production') {
-    ReactGA.initialize('UA-115961362-1', {
+if (process.env.NODE_ENV === "production") {
+    ReactGA.initialize("UA-115961362-1", {
         gaOptions: {
-            siteSpeedSampleRate: 100
-        }
+            siteSpeedSampleRate: 100,
+        },
     });
     ReactGA.pageview(window.location.hash);
 
@@ -42,14 +41,14 @@ const StyledCircularProgress = styled(CircularProgress)`
 const RefreshIcon = () => (
     <StyledCircularProgress
         size={200}
-        style={{ color: '#FF9800' }}
+        style={{ color: "#FF9800" }}
         thickness={5}
     />
 );
 
 const UniversalComponent = universal(({ path }) => import(`${path}`), {
     loading: RefreshIcon,
-    minDelay: 500
+    minDelay: 500,
 });
 
 const AboutComponent = () => <UniversalComponent path="./components/About" />;
@@ -58,23 +57,48 @@ const SkillsComponent = () => <UniversalComponent path="./components/Skills" />;
 
 const WorkComponent = () => <UniversalComponent path="./components/Work" />;
 
-const ProjectsComponent = () => <UniversalComponent path="./components/Projects" />;
+const ProjectsComponent = () => (
+    <UniversalComponent path="./components/Projects" />
+);
 
-const EducationComponent = () => <UniversalComponent path="./components/Education" />;
+const EducationComponent = () => (
+    <UniversalComponent path="./components/Education" />
+);
 
 const Routes = () => (
     <HashRouter>
-        <Fragment>
+        <>
             <DrawerContainer />
             <ContainerDiv>
-                <Route exact path="/" component={AboutComponent} key={Math.random()} />
-                <Route path="/skills" component={SkillsComponent} key={Math.random()} />
-                <Route path="/work" component={WorkComponent} key={Math.random()} />
-                <Route path="/projects" component={ProjectsComponent} key={Math.random()} />
-                <Route path="/education" component={EducationComponent} key={Math.random()} />
+                <Route
+                    exact
+                    path="/"
+                    component={AboutComponent}
+                    key={Math.random()}
+                />
+                <Route
+                    path="/skills"
+                    component={SkillsComponent}
+                    key={Math.random()}
+                />
+                <Route
+                    path="/work"
+                    component={WorkComponent}
+                    key={Math.random()}
+                />
+                <Route
+                    path="/projects"
+                    component={ProjectsComponent}
+                    key={Math.random()}
+                />
+                <Route
+                    path="/education"
+                    component={EducationComponent}
+                    key={Math.random()}
+                />
             </ContainerDiv>
-        </Fragment>
+        </>
     </HashRouter>
 );
 
-export default hot(module)(Routes);
+export default Routes;
